@@ -42,15 +42,33 @@
                                 <date key="date" timeIntervalSinceReferenceDate="492362732.34856701">
                                     <!--2016-08-08 15:25:32 +0000-->
                                 </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978271200">
+                                    <!--1970-01-01 10:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="631101600">
+                                    <!--2020-12-31 10:00:00 +0000-->
+                                </date>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qk-tF-ovQ">
+                                <rect key="frame" x="278" y="325" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="qA4-ej-TbN" eventType="touchUpInside" id="Blb-D7-i2B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9Qk-tF-ovQ" firstAttribute="centerX" secondItem="DTb-eV-0Sj" secondAttribute="centerX" id="cJ3-Os-zTR"/>
+                            <constraint firstItem="9Qk-tF-ovQ" firstAttribute="top" secondItem="kM6-WZ-hYB" secondAttribute="bottom" constant="109" id="eRr-3p-Li5"/>
                             <constraint firstItem="kM6-WZ-hYB" firstAttribute="centerX" secondItem="DTb-eV-0Sj" secondAttribute="centerX" id="fEm-5a-Vw7"/>
                             <constraint firstItem="kM6-WZ-hYB" firstAttribute="top" secondItem="DTb-eV-0Sj" secondAttribute="topMargin" id="hi3-Ba-fDH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Date" image="clockicon" id="w6j-xo-o47"/>
+                    <connections>
+                        <outlet property="datePicker" destination="kM6-WZ-hYB" id="PeK-DR-jl2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URw-mb-iAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
