@@ -14,6 +14,11 @@
 		91D719401D58BC77001DB720 /* Pickers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91D7193E1D58BC77001DB720 /* Pickers.xcdatamodeld */; };
 		91D719421D58BC77001DB720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D719411D58BC77001DB720 /* Assets.xcassets */; };
 		91D719451D58BC77001DB720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D719431D58BC77001DB720 /* LaunchScreen.storyboard */; };
+		91D7194E1D58BEC8001DB720 /* CustomPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D7194D1D58BEC8001DB720 /* CustomPickerViewController.m */; };
+		91D719511D58BEE9001DB720 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D719501D58BEE9001DB720 /* DatePickerViewController.m */; };
+		91D719541D58BF1A001DB720 /* DependentComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D719531D58BF1A001DB720 /* DependentComponentPickerViewController.m */; };
+		91D719571D58BF46001DB720 /* DoubleComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D719561D58BF46001DB720 /* DoubleComponentPickerViewController.m */; };
+		91D7195A1D58BF60001DB720 /* SingleComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D719591D58BF60001DB720 /* SingleComponentPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,16 @@
 		91D719411D58BC77001DB720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91D719441D58BC77001DB720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91D719461D58BC77001DB720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91D7194C1D58BEC8001DB720 /* CustomPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerViewController.h; sourceTree = "<group>"; };
+		91D7194D1D58BEC8001DB720 /* CustomPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerViewController.m; sourceTree = "<group>"; };
+		91D7194F1D58BEE9001DB720 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		91D719501D58BEE9001DB720 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		91D719521D58BF1A001DB720 /* DependentComponentPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependentComponentPickerViewController.h; sourceTree = "<group>"; };
+		91D719531D58BF1A001DB720 /* DependentComponentPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependentComponentPickerViewController.m; sourceTree = "<group>"; };
+		91D719551D58BF46001DB720 /* DoubleComponentPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleComponentPickerViewController.h; sourceTree = "<group>"; };
+		91D719561D58BF46001DB720 /* DoubleComponentPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleComponentPickerViewController.m; sourceTree = "<group>"; };
+		91D719581D58BF60001DB720 /* SingleComponentPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleComponentPickerViewController.h; sourceTree = "<group>"; };
+		91D719591D58BF60001DB720 /* SingleComponentPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleComponentPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +85,16 @@
 				91D719461D58BC77001DB720 /* Info.plist */,
 				91D7193E1D58BC77001DB720 /* Pickers.xcdatamodeld */,
 				91D719321D58BC77001DB720 /* Supporting Files */,
+				91D7194C1D58BEC8001DB720 /* CustomPickerViewController.h */,
+				91D719551D58BF46001DB720 /* DoubleComponentPickerViewController.h */,
+				91D719561D58BF46001DB720 /* DoubleComponentPickerViewController.m */,
+				91D719581D58BF60001DB720 /* SingleComponentPickerViewController.h */,
+				91D719591D58BF60001DB720 /* SingleComponentPickerViewController.m */,
+				91D7194D1D58BEC8001DB720 /* CustomPickerViewController.m */,
+				91D7194F1D58BEE9001DB720 /* DatePickerViewController.h */,
+				91D719501D58BEE9001DB720 /* DatePickerViewController.m */,
+				91D719521D58BF1A001DB720 /* DependentComponentPickerViewController.h */,
+				91D719531D58BF1A001DB720 /* DependentComponentPickerViewController.m */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -152,10 +177,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D7194E1D58BEC8001DB720 /* CustomPickerViewController.m in Sources */,
+				91D7195A1D58BF60001DB720 /* SingleComponentPickerViewController.m in Sources */,
 				91D7193A1D58BC77001DB720 /* ViewController.m in Sources */,
 				91D719401D58BC77001DB720 /* Pickers.xcdatamodeld in Sources */,
+				91D719571D58BF46001DB720 /* DoubleComponentPickerViewController.m in Sources */,
 				91D719371D58BC77001DB720 /* AppDelegate.m in Sources */,
+				91D719511D58BEE9001DB720 /* DatePickerViewController.m in Sources */,
 				91D719341D58BC77001DB720 /* main.m in Sources */,
+				91D719541D58BF1A001DB720 /* DependentComponentPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
