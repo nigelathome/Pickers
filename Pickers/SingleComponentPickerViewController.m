@@ -9,7 +9,10 @@
 #import "SingleComponentPickerViewController.h"
 
 @interface SingleComponentPickerViewController ()
+@property (weak, nonatomic) IBOutlet UIPickerView *singlePicker;
+@property (strong, nonatomic) NSArray *characterNames;
 
+- (IBAction)buttonPressed:(id)sender;
 @end
 
 @implementation SingleComponentPickerViewController
@@ -17,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.characterNames = @[@"Luke", @"Leia", @"Han", @"Chewbacca",@"Artoo", @"Threepio", @"Lando"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +38,20 @@
 }
 */
 
+- (IBAction)buttonPressed:(id)sender {
+    NSInteger row = [self.singlePicker selectedRowInComponent:0];
+    NSString *selected = self.characterNames[row];
+    NSString *title = [[NSString alloc] initWithFormat:@"You selected %@!", selected];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:@"Thanks for choosing."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"You're welcome."
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:nil];
+    [alert addAction:action];
+    [self presentViewController:alert
+                       animated:YES
+                     completion:nil];
+    
+}
 @end

@@ -22,8 +22,11 @@
                                 <rect key="frame" x="140" y="0.0" width="320" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aU-r8-b0Y">
-                                <rect key="frame" x="277" y="317" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="278" y="317" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="wc9-Mi-1aU" eventType="touchUpInside" id="dSG-tx-3CP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,6 +38,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Single" image="singleicon" id="q0j-eG-WwD"/>
+                    <connections>
+                        <outlet property="singlePicker" destination="e07-lT-6iR" id="MKC-ue-2L1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkm-oQ-TbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
