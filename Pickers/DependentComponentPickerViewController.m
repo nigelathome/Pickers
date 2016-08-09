@@ -8,8 +8,14 @@
 
 #import "DependentComponentPickerViewController.h"
 
-@interface DependentComponentPickerViewController ()
+#define kStateComponent 0
+#define kZipComponent   1
 
+@interface DependentComponentPickerViewController ()
+@property (weak, nonatomic) IBOutlet UIPickerView *dependentPicker;
+@property (strong, nonatomic) NSDictionary *stateZips;
+@property (strong, nonatomic) NSArray *states;
+@property (strong, nonatomic) NSArray *zips;
 @end
 
 @implementation DependentComponentPickerViewController
