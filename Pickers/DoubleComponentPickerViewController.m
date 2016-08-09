@@ -8,6 +8,9 @@
 
 #import "DoubleComponentPickerViewController.h"
 
+#define kFillingComponent 0
+#define kBreadComponent 1
+
 @interface DoubleComponentPickerViewController ()
 
 @end
