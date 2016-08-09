@@ -142,6 +142,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9We-5p-Hvf">
                                 <rect key="frame" x="278" y="335" width="44" height="30"/>
                                 <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Srj-CW-2q4" eventType="touchUpInside" id="6eV-uh-0GL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -153,6 +156,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Double" image="doubleicon" id="BRi-ZC-xLS"/>
+                    <connections>
+                        <outlet property="doublePicker" destination="gnK-m0-V19" id="DLK-pf-UcB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mn5-YU-qiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

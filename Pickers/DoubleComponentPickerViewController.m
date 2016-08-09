@@ -12,6 +12,10 @@
 #define kBreadComponent 1
 
 @interface DoubleComponentPickerViewController ()
+@property (weak, nonatomic) IBOutlet UIPickerView *doublePicker;
+@property (strong, nonatomic) NSArray *fillingTypes;
+@property (strong, nonatomic) NSArray *breadTypes;
+- (IBAction)buttonPressed:(id)sender;
 
 @end
 
@@ -20,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.fillingTypes = @[@"Ham", @"Turkey", @"Peanut Butter", @"Tuna Salad", @"Chicken Salad", @"Roast Beef", @"Vegemite"];
+    self.breadTypes = @[@"White", @"Whole Wheat", @"Rye", @"Sourdough", @"Seven Grain"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +43,26 @@
 }
 */
 
+- (IBAction)buttonPressed:(id)sender {
+    NSInteger fillingRow = [self.doublePicker selectedRowInComponent:kFillingComponent];
+    NSString *filling = self.fillingTypes[fillingRow];
+    
+    NSInteger breadRow = [self.doublePicker selectedRowInComponent:kBreadComponent];
+    NSString *bread = self.breadTypes[breadRow];
+
+    NSString *title = [[NSString alloc] initWithFormat:@"Your %@ on %@ bread will be right up.", filling, bread];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Thank you for your order"
+                                                                   message:title
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Great!"
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:nil];
+    [alert addAction:action];
+    [self presentViewController:alert
+                       animated:YES
+                     completion:nil];
+}
+
 #pragma mark -
 #pragma mark Picker Data Source Methods
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
@@ -44,14 +70,25 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 2;
+    if (component == kFillingComponent) {
+        return [self.fillingTypes count];
+    } else if (component == kBreadComponent) {
+        return [self.breadTypes count];
+    } else {
+         return -1;
+    }
 }
 
-#pragma mark Picker Delegate Methods 
+#pragma mark Picker Delegate Methods
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return nil;
-}
+    if (component == kFillingComponent) {
+        return self.fillingTypes[row];
+    } else if (component == kBreadComponent) {
+        return self.breadTypes[row];
+    } else {
+        return nil ;
+    }
 
- 
+}
 
 @end
