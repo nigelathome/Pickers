@@ -17,7 +17,22 @@
                     <view key="view" contentMode="scaleToFill" id="M5t-rA-l9z">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e07-lT-6iR">
+                                <rect key="frame" x="140" y="0.0" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aU-r8-b0Y">
+                                <rect key="frame" x="277" y="317" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8aU-r8-b0Y" firstAttribute="centerX" secondItem="M5t-rA-l9z" secondAttribute="centerX" id="3Ft-zT-F0D"/>
+                            <constraint firstItem="e07-lT-6iR" firstAttribute="centerX" secondItem="M5t-rA-l9z" secondAttribute="centerX" id="Mua-qS-Fwm"/>
+                            <constraint firstItem="8aU-r8-b0Y" firstAttribute="top" secondItem="e07-lT-6iR" secondAttribute="bottom" constant="101" id="jdb-w4-jOp"/>
+                            <constraint firstItem="e07-lT-6iR" firstAttribute="top" secondItem="M5t-rA-l9z" secondAttribute="topMargin" id="uBi-g1-F1a"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Single" image="singleicon" id="q0j-eG-WwD"/>
                 </viewController>
