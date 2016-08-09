@@ -131,7 +131,26 @@
                     <view key="view" contentMode="scaleToFill" id="LIp-CN-YQ4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnK-m0-V19">
+                                <rect key="frame" x="140" y="33" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Srj-CW-2q4" id="JXb-aj-mrO"/>
+                                    <outlet property="delegate" destination="Srj-CW-2q4" id="Uu9-zO-CS3"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9We-5p-Hvf">
+                                <rect key="frame" x="278" y="335" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9We-5p-Hvf" firstAttribute="centerX" secondItem="LIp-CN-YQ4" secondAttribute="centerX" id="0dt-pw-aRM"/>
+                            <constraint firstItem="9We-5p-Hvf" firstAttribute="top" secondItem="gnK-m0-V19" secondAttribute="bottom" constant="86" id="MAH-kc-NXL"/>
+                            <constraint firstItem="gnK-m0-V19" firstAttribute="top" secondItem="OHV-x6-1av" secondAttribute="bottom" constant="13" id="ghf-pJ-zkw"/>
+                            <constraint firstItem="gnK-m0-V19" firstAttribute="centerX" secondItem="LIp-CN-YQ4" secondAttribute="centerX" id="hcZ-H8-OEw"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Double" image="doubleicon" id="BRi-ZC-xLS"/>
                 </viewController>
