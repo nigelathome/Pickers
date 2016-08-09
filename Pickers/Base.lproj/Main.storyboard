@@ -20,6 +20,10 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e07-lT-6iR">
                                 <rect key="frame" x="140" y="0.0" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wc9-Mi-1aU" id="xuW-33-lam"/>
+                                    <outlet property="delegate" destination="wc9-Mi-1aU" id="lZe-yR-1q8"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aU-r8-b0Y">
                                 <rect key="frame" x="278" y="317" width="44" height="30"/>

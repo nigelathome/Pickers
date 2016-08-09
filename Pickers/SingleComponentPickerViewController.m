@@ -55,6 +55,9 @@
     
 }
 
+// this method comes from UIPickerViewDataSource protocol
+#pragma mark -
+#pragma mark Picker Data Source Methods
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
@@ -67,6 +70,8 @@
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return self.characterNames[row];
 }
+
+
 
 
 
