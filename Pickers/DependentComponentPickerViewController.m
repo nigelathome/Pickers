@@ -24,6 +24,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // grab a reference to our application’s main bundle
+    NSBundle *bundle = [NSBundle mainBundle];
+    // use the main bundle to retrieve the URL of the resource in which we’re interested, then get file statedictionary.plist
+    NSURL *plistURL = [bundle URLForResource:@"statedictionary" withExtension:@"plist"];
+    self.stateZips = [NSDictionary dictionaryWithContentsOfURL:plistURL];
+    
+    NSArray *allStates = [self.stateZips allKeys];
+    NSArray *storedStates = [allStates sortedArrayUsingSelector:@selector(compare:)];
+    self.states = storedStates;
+    
+    NSString *selectedState = self.states[0];
+    self.zips = self.stateZips[selectedState];
 }
 
 - (void)didReceiveMemoryWarning {
