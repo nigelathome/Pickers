@@ -20,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.images = @[[UIImage imageNamed:@"seven"], [UIImage imageNamed:@"seven"], [UIImage imageNamed:@"bar"], [UIImage imageNamed:@"cherry"], [UIImage imageNamed:@"crown"], [UIImage imageNamed:@"apple"], [UIImage imageNamed:@"lemon"]];
+    self.winLabel.text = @" ";
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,8 +58,6 @@
         if (numInRow >= 3) {
             isWin = YES;
         }
-        
-            
     }
     if (isWin) {
         self.winLabel.text = @"WINNER!";
@@ -64,7 +65,29 @@
         self.winLabel.text = @" ";
     }
 }
-    
+
+#pragma mark -
+#pragma mark Picker Data Source Methods
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 5;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView
+numberOfRowsInComponent:(NSInteger)component {
+    return [self.images count];
+}
+
+#pragma mark Picker Delegate Methods
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    UIImage *image = self.images[row];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    return imageView;
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
+    return 64;
+}
+
     
     
     

@@ -220,11 +220,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9c1-QA-hJw">
-                                <rect key="frame" x="140" y="20" width="320" height="216"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9c1-QA-hJw">
+                                <rect key="frame" x="140" y="20" width="320" height="258"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="a28-RA-1cQ" id="k8u-cJ-mwq"/>
+                                    <outlet property="delegate" destination="a28-RA-1cQ" id="eux-Cp-240"/>
+                                </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-fp-6F5">
-                                <rect key="frame" x="279" y="309" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-fp-6F5">
+                                <rect key="frame" x="287" y="309" width="26.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -243,7 +247,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9c1-QA-hJw" firstAttribute="centerX" secondItem="A0z-XU-I4y" secondAttribute="centerX" id="5EJ-Pu-Nri"/>
-                            <constraint firstItem="TDF-fp-6F5" firstAttribute="top" secondItem="9c1-QA-hJw" secondAttribute="bottom" constant="73" id="6HS-gO-4fj"/>
+                            <constraint firstItem="TDF-fp-6F5" firstAttribute="top" secondItem="9c1-QA-hJw" secondAttribute="bottom" constant="31" id="6HS-gO-4fj"/>
                             <constraint firstItem="9c1-QA-hJw" firstAttribute="top" secondItem="8gL-1e-tBL" secondAttribute="bottom" id="LhX-cl-V20"/>
                             <constraint firstItem="TDF-fp-6F5" firstAttribute="centerX" secondItem="A0z-XU-I4y" secondAttribute="centerX" id="MSI-gn-Cj0"/>
                             <constraint firstItem="0A1-jC-TnM" firstAttribute="top" secondItem="mxL-VW-9UC" secondAttribute="bottom" constant="127" id="a4b-M6-YVT"/>
@@ -256,7 +260,6 @@
                         <outlet property="customPicker" destination="9c1-QA-hJw" id="TfZ-Cs-nQa"/>
                         <outlet property="spin" destination="TDF-fp-6F5" id="Yvz-9G-Efv"/>
                         <outlet property="winLabel" destination="TDF-fp-6F5" id="pDP-JG-k3X"/>
-                        <outletCollection property="buttonPressed" destination="mxL-VW-9UC" id="qJG-OC-Bsm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlc-Y7-I2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
