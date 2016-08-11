@@ -119,4 +119,15 @@ numberOfRowsInComponent:(NSInteger)component {
     }
 }
 
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    CGFloat pickerWidth = pickerView.bounds.size.width;
+    if (component == kZipComponent) {
+        return pickerWidth/3;
+    } else if (component == kStateComponent) {
+        return 2*pickerWidth/3;
+    } else {
+        return 0.f;
+    }
+}
+
 @end
