@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9159EE251D5CA37700E312A5 /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9159EE241D5CA37700E312A5 /* statedictionary.plist */; };
 		91D719341D58BC77001DB720 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D719331D58BC77001DB720 /* main.m */; };
 		91D719371D58BC77001DB720 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D719361D58BC77001DB720 /* AppDelegate.m */; };
 		91D7193A1D58BC77001DB720 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D719391D58BC77001DB720 /* ViewController.m */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9159EE241D5CA37700E312A5 /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statedictionary.plist; sourceTree = "<group>"; };
 		91D7192F1D58BC77001DB720 /* Pickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D719331D58BC77001DB720 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		91D719351D58BC77001DB720 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				91D719501D58BEE9001DB720 /* DatePickerViewController.m */,
 				91D719521D58BF1A001DB720 /* DependentComponentPickerViewController.h */,
 				91D719531D58BF1A001DB720 /* DependentComponentPickerViewController.m */,
+				9159EE241D5CA37700E312A5 /* statedictionary.plist */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				91D719451D58BC77001DB720 /* LaunchScreen.storyboard in Resources */,
 				91D719421D58BC77001DB720 /* Assets.xcassets in Resources */,
+				9159EE251D5CA37700E312A5 /* statedictionary.plist in Resources */,
 				91D7193D1D58BC77001DB720 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +340,7 @@
 				91D7194B1D58BC77001DB720 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
