@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // +(UIImage *)imageNamed:(NSString *)name returns the image object associated with the specified filename.
     self.images = @[[UIImage imageNamed:@"seven"], [UIImage imageNamed:@"seven"], [UIImage imageNamed:@"bar"], [UIImage imageNamed:@"cherry"], [UIImage imageNamed:@"crown"], [UIImage imageNamed:@"apple"], [UIImage imageNamed:@"lemon"]];
     self.winLabel.text = @" ";
     

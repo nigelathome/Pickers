@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9159EE241D5CA37700E312A5 /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statedictionary.plist; sourceTree = "<group>"; };
+		9159EE241D5CA37700E312A5 /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = statedictionary.plist; path = Pickers/statedictionary.plist; sourceTree = "<group>"; };
 		91D7192F1D58BC77001DB720 /* Pickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D719331D58BC77001DB720 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		91D719351D58BC77001DB720 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +63,7 @@
 			children = (
 				91D719311D58BC77001DB720 /* Pickers */,
 				91D719301D58BC77001DB720 /* Products */,
+				9159EE241D5CA37700E312A5 /* statedictionary.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,7 +98,6 @@
 				91D719501D58BEE9001DB720 /* DatePickerViewController.m */,
 				91D719521D58BF1A001DB720 /* DependentComponentPickerViewController.h */,
 				91D719531D58BF1A001DB720 /* DependentComponentPickerViewController.m */,
-				9159EE241D5CA37700E312A5 /* statedictionary.plist */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
