@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		914D116F1D66F00D003AEE6B /* crunch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 914D116D1D66F00D003AEE6B /* crunch.wav */; };
+		914D11701D66F00D003AEE6B /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 914D116E1D66F00D003AEE6B /* win.wav */; };
 		9159EE251D5CA37700E312A5 /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9159EE241D5CA37700E312A5 /* statedictionary.plist */; };
 		91D719341D58BC77001DB720 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D719331D58BC77001DB720 /* main.m */; };
 		91D719371D58BC77001DB720 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D719361D58BC77001DB720 /* AppDelegate.m */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		914D116D1D66F00D003AEE6B /* crunch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crunch.wav; sourceTree = "<group>"; };
+		914D116E1D66F00D003AEE6B /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		9159EE241D5CA37700E312A5 /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = statedictionary.plist; path = Pickers/statedictionary.plist; sourceTree = "<group>"; };
 		91D7192F1D58BC77001DB720 /* Pickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D719331D58BC77001DB720 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		91D719311D58BC77001DB720 /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				914D116D1D66F00D003AEE6B /* crunch.wav */,
+				914D116E1D66F00D003AEE6B /* win.wav */,
 				91D719351D58BC77001DB720 /* AppDelegate.h */,
 				91D719361D58BC77001DB720 /* AppDelegate.m */,
 				91D719381D58BC77001DB720 /* ViewController.h */,
@@ -167,8 +173,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				914D116F1D66F00D003AEE6B /* crunch.wav in Resources */,
 				91D719451D58BC77001DB720 /* LaunchScreen.storyboard in Resources */,
 				91D719421D58BC77001DB720 /* Assets.xcassets in Resources */,
+				914D11701D66F00D003AEE6B /* win.wav in Resources */,
 				9159EE251D5CA37700E312A5 /* statedictionary.plist in Resources */,
 				91D7193D1D58BC77001DB720 /* Main.storyboard in Resources */,
 			);

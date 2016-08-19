@@ -257,13 +257,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="1MB-ic-33L"/>
                     <connections>
+                        <outlet property="button" destination="mxL-VW-9UC" id="y1B-bl-yEA"/>
                         <outlet property="customPicker" destination="9c1-QA-hJw" id="TfZ-Cs-nQa"/>
                         <outlet property="winLabel" destination="TDF-fp-6F5" id="pDP-JG-k3X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlc-Y7-I2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="-905"/>
+            <point key="canvasLocation" x="905" y="-887"/>
         </scene>
     </scenes>
     <resources>

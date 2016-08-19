@@ -7,12 +7,17 @@
 //
 
 #import "CustomPickerViewController.h"
+#import <AudioToolBox/AudioToolBox.h>
 # define numsOfSpinWheel 5
+
 @interface CustomPickerViewController ()
+
 @property (weak, nonatomic) IBOutlet UIPickerView *customPicker;
 @property (strong, nonatomic) NSArray *images;
 @property (weak, nonatomic) IBOutlet UILabel *winLabel;
+@property (weak, nonatomic) IBOutlet UIButton *button;
 - (IBAction)spin:(id)sender;
+
 @end
 
 @implementation CustomPickerViewController
@@ -79,7 +84,11 @@ numberOfRowsInComponent:(NSInteger)component {
 }
 
 #pragma mark Picker Delegate Methods
-- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+- (UIView *)pickerView:(UIPickerView *)pickerView
+            viewForRow:(NSInteger)row
+          forComponent:(NSInteger)component
+           reusingView:(UIView *)view
+{
     UIImage *image = self.images[row];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     return imageView;
