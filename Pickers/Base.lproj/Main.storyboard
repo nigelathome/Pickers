@@ -240,7 +240,7 @@
                                 </constraints>
                                 <state key="normal" title="Spin"/>
                                 <connections>
-                                    <action selector="spin:" destination="a28-RA-1cQ" eventType="touchUpInside" id="5S9-lp-d8n"/>
+                                    <action selector="spin:" destination="a28-RA-1cQ" eventType="touchUpInside" id="ikO-hb-dW6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -255,9 +255,9 @@
                             <constraint firstItem="mxL-VW-9UC" firstAttribute="centerX" secondItem="TDF-fp-6F5" secondAttribute="centerX" id="hns-C3-Y7U"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="1MB-ic-33L"/>
+                    <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="2Pz-uj-B5q"/>
                     <connections>
-                        <outlet property="button" destination="mxL-VW-9UC" id="y1B-bl-yEA"/>
+                        <outlet property="button" destination="mxL-VW-9UC" id="wdA-mu-0AW"/>
                         <outlet property="customPicker" destination="9c1-QA-hJw" id="TfZ-Cs-nQa"/>
                         <outlet property="winLabel" destination="TDF-fp-6F5" id="pDP-JG-k3X"/>
                     </connections>

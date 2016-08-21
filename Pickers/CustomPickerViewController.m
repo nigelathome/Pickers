@@ -21,6 +21,7 @@
 @property (assign, nonatomic) SystemSoundID crunchSoundID;
 - (IBAction)spin:(id)sender;
 
+
 @end
 
 @implementation CustomPickerViewController
@@ -48,31 +49,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (void)showButton {
+    self.button.hidden = NO;
+}
 
-- (IBAction)spin:(id)sender {
-    BOOL isWin = NO;
-    int numInRow = 1;
-    int lastVal = -1;
-    for (int i = 0; i < numsOfSpinWheel; ++i) {
-        int newValue = arc4random_uniform((uint)[self.images count]);
-        if (newValue == lastVal) {
-            numInRow++;
-        } else {
-            numInRow = 1;
-        }
-        lastVal = newValue;
-        
-        [self.customPicker selectRow:newValue inComponent:i animated:YES];
-        [self.customPicker reloadComponent:i];
-        if (numInRow >= 3) {
-            isWin = YES;
-        }
+- (void)playWinSound {
+    if (0 == _winSoundID) {
+        NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"win" withExtension:@"wav"];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)(soundURL) , &_winSoundID);
     }
-    if (isWin) {
-        self.winLabel.text = @"WINNER!";
-    } else {
-        self.winLabel.text = @" ";
-    }
+    AudioServicesPlaySystemSound(_winSoundID);
+    self.winLabel.text = @"WINNER!";
+    [self performSelector:@selector(showButton)
+               withObject:nil
+               afterDelay:1.5];
 }
 
 #pragma mark -
@@ -101,35 +91,47 @@ numberOfRowsInComponent:(NSInteger)component {
     return 64;
 }
 
+- (IBAction)spin:(id)sender {
+    BOOL isWin = NO;
+    int numInRow = 1;
+    int lastVal = -1;
+    for (int i = 0; i < numsOfSpinWheel; ++i) {
+        int newValue = arc4random_uniform((uint)[self.images count]);
+        if (newValue == lastVal) {
+            numInRow++;
+        } else {
+            numInRow = 1;
+        }
+        lastVal = newValue;
+        
+        [self.customPicker selectRow:newValue inComponent:i animated:YES];
+        [self.customPicker reloadComponent:i];
+        if (numInRow >= 3) {
+            isWin = YES;
+        }
+    }
+    //    if (isWin) {
+    //        self.winLabel.text = @"WINNER!";
+    //    } else {
+    //        self.winLabel.text = @" ";
+    //    }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
+    if (0 == _crunchSoundID) { // load the sound file
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"crunch" ofType:@"wav"];
+        NSURL *soundURL = [NSURL fileURLWithPath:path];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)(soundURL) , &_crunchSoundID);
+    }
+    AudioServicesPlaySystemSound(_crunchSoundID);
+    if (isWin) {
+        [self performSelector:@selector(playWinSound)
+                   withObject:nil
+                   afterDelay:.5];
+    } else {
+        [self performSelector:@selector(showButton)
+                   withObject:nil
+                   afterDelay:.5];
+    }
+    self.button.hidden = YES;
+    self.winLabel.text = @" ";
+}
 @end
