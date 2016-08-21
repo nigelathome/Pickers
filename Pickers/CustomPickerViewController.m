@@ -16,6 +16,9 @@
 @property (strong, nonatomic) NSArray *images;
 @property (weak, nonatomic) IBOutlet UILabel *winLabel;
 @property (weak, nonatomic) IBOutlet UIButton *button;
+
+@property (assign, nonatomic) SystemSoundID winSoundID;
+@property (assign, nonatomic) SystemSoundID crunchSoundID;
 - (IBAction)spin:(id)sender;
 
 @end
